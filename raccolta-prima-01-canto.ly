@@ -13,7 +13,7 @@ unoUpper = \relative c'' {
     \clef violin
     \time 4/4
     \key d \minor
-	\tempo "Andante"
+    \tempo "Andante"
 
     g2\mf~ g4 f
     d2~ d4 f
@@ -67,7 +67,7 @@ unoUpper = \relative c'' {
 unoLower = \relative c' {
     \clef bass
     \time 4/4
-	\key d \minor
+    \key d \minor
 
     r1
     r
