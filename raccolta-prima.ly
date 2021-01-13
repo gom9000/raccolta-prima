@@ -21,6 +21,7 @@
 \include "raccolta-prima-03-tarantella.ly"
 \include "raccolta-prima-05-danza-del-passerotto.ly"
 \include "raccolta-prima-06-valzer.ly"
+\include "raccolta-prima-07-notturno.ly"
 
 
 % ===========================================================================================================
@@ -151,6 +152,31 @@
         }
         \layout {}
         \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 84 4) } }
+    }
+    % -------------------------------------------------------------------------------------------------------------------
+
+    \pageBreak
+
+    % -------------------------------------------------------------------------------------------------------------------
+    % No7 - Notturno
+    % -------------------------------------------------------------------------------------------------------------------   
+    \score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+        <<
+            \set PianoStaff.instrumentName = \markup { "5" }
+            \new Staff = "treble" << \setteUpper >>
+            \new Staff = "bass"   << \setteLower >>
+        >>
+        \header {
+            title       = ##f
+            subtitle    = "Notturno"
+            subsubtitle = ##f
+            composer    = ##f
+            opus        = "No.7"
+            meter       = ##f %\markup { \italic "                          Andante" }
+        }
+        \layout {}
+        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 80 4) } }
     }
     % -------------------------------------------------------------------------------------------------------------------
 }
