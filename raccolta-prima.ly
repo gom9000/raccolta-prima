@@ -22,6 +22,7 @@
 \include "raccolta-prima-05-danza-del-passerotto.ly"
 \include "raccolta-prima-06-valzer.ly"
 \include "raccolta-prima-07-notturno.ly"
+\include "raccolta-prima-08-ballata.ly"
 
 
 % ===========================================================================================================
@@ -48,12 +49,15 @@
        tagline     = ##f
     }
 
-    \markup { \vspace #20 }
-    \markup \fontsize #3 \bold  { "     gos95" }
-    \markup { \vspace #1 }
+    \markup { \vspace #8 }
+	\markup \fontsize #2 { "      gos95" }
+	\markup { \vspace #.7 }
     \markup \fontsize #10 \bold { "  Raccolta Prima" }
     \markup { \vspace #1 }
     \markup \fontsize #5 \bold  { "    di piccoli brani al pianoforte" }
+    \markup { \vspace #8 }
+    \markup { \general-align #Y #CENTER { \epsfile #X #100 #"raccolta-prima-front.eps" } }
+	
 
     \pageBreak
 
@@ -72,7 +76,7 @@
             subtitle    = "Canto"
             subsubtitle = ##f
             composer    = ##f
-            opus        = "No.1"
+            opus        = "Raccolta Prima, No.1"
             meter       = ##f %\markup { \italic "                          Andante" }
         }
         \layout {}
@@ -97,7 +101,7 @@
             subtitle    = "Tarantella"
             subsubtitle = ##f
             composer    = ##f
-            opus        = "No.3"
+            opus        = "Raccolta Prima, No.3"
             meter       = ##f %\markup { \italic "                          Allegretto" }
         }
         \layout {}
@@ -122,7 +126,7 @@
             subtitle    = "Danza del passerotto"
             subsubtitle = ##f
             composer    = ##f
-            opus        = "No.5"
+            opus        = "Raccolta Prima, No.5"
             meter       = ##f %\markup { \italic "                          Allegretto" }
         }
         \layout {}
@@ -147,7 +151,7 @@
             subtitle    = "Valzer"
             subsubtitle = ##f
             composer    = ##f
-            opus        = "No.6"
+            opus        = "Raccolta Prima, No.6"
             meter       = ##f %\markup { \italic "                          Andante" }
         }
         \layout {}
@@ -172,7 +176,32 @@
             subtitle    = "Notturno"
             subsubtitle = ##f
             composer    = ##f
-            opus        = "No.7"
+            opus        = "Raccolta Prima, No.7"
+            meter       = ##f %\markup { \italic "                          Andante" }
+        }
+        \layout {}
+        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 80 4) } }
+    }
+    % -------------------------------------------------------------------------------------------------------------------
+
+    \pageBreak
+
+    % -------------------------------------------------------------------------------------------------------------------
+    % No8 - Ballata
+    % -------------------------------------------------------------------------------------------------------------------   
+    \score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+        <<
+            \set PianoStaff.instrumentName = \markup { "6" }
+            \new Staff = "treble" << \ottoUpper >>
+            \new Staff = "bass"   << \ottoLower >>
+        >>
+        \header {
+            title       = ##f
+            subtitle    = "Ballata"
+            subsubtitle = ##f
+            composer    = ##f
+            opus        = "Raccolta Prima, No.8"
             meter       = ##f %\markup { \italic "                          Andante" }
         }
         \layout {}
