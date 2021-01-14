@@ -23,6 +23,7 @@
 \include "raccolta-prima-06-valzer.ly"
 \include "raccolta-prima-07-notturno.ly"
 \include "raccolta-prima-08-ballata.ly"
+\include "raccolta-prima-09-ragtime.ly"
 
 
 % ===========================================================================================================
@@ -203,6 +204,31 @@
             composer    = ##f
             opus        = "Raccolta Prima, No.8"
             meter       = ##f %\markup { \italic "                          Adagio" }
+        }
+        \layout {}
+        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 72 4) } }
+    }
+    % -------------------------------------------------------------------------------------------------------------------
+
+    \pageBreak
+
+    % -------------------------------------------------------------------------------------------------------------------
+    % No9 - Ragtime
+    % -------------------------------------------------------------------------------------------------------------------   
+    \score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+        <<
+            \set PianoStaff.instrumentName = \markup { "7" }
+            \new Staff = "treble" << \noveUpper >>
+            \new Staff = "bass"   << \noveLower >>
+        >>
+        \header {
+            title       = ##f
+            subtitle    = "Ragtime"
+            subsubtitle = ##f
+            composer    = ##f
+            opus        = "Raccolta Prima, No.9"
+            meter       = ##f %\markup { \italic "                          Moderato" }
         }
         \layout {}
         \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 72 4) } }
