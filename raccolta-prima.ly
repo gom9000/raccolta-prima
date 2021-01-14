@@ -50,14 +50,14 @@
     }
 
     \markup { \vspace #8 }
-	\markup \fontsize #2 { "      gos95" }
-	\markup { \vspace #.7 }
+    \markup \fontsize #2 { "      gos95" }
+    \markup { \vspace #.7 }
     \markup \fontsize #10 \bold { "  Raccolta Prima" }
     \markup { \vspace #1 }
     \markup \fontsize #5 \bold  { "    di piccoli brani al pianoforte" }
     \markup { \vspace #8 }
     \markup { \general-align #Y #CENTER { \epsfile #X #100 #"raccolta-prima-front.eps" } }
-	
+    
 
     \pageBreak
 
@@ -198,14 +198,14 @@
         >>
         \header {
             title       = ##f
-            subtitle    = "Ballata"
+            subtitle    = "Ballata sul nome Laura (la-do-fa-re-do)"
             subsubtitle = ##f
             composer    = ##f
             opus        = "Raccolta Prima, No.8"
-            meter       = ##f %\markup { \italic "                          Andante" }
+            meter       = ##f %\markup { \italic "                          Adagio" }
         }
         \layout {}
-        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 80 4) } }
+        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 72 4) } }
     }
     % -------------------------------------------------------------------------------------------------------------------
 }
