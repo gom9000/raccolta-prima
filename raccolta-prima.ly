@@ -25,6 +25,7 @@
 \include "raccolta-prima-08-ballata.ly"
 \include "raccolta-prima-09-ragtime.ly"
 \include "raccolta-prima-10-allegretto.ly"
+\include "raccolta-prima-11-preludio.ly"
 
 
 % ===========================================================================================================
@@ -37,17 +38,15 @@
         left-margin = 15
         bottom-margin = 10
         top-margin = 10
-        markup-system-spacing #'basic-distance = #8
-        system-system-spacing #'basic-distance = #6
-%        ragged-bottom = ##t
+%        markup-system-spacing #'basic-distance = #8
+%        system-system-spacing #'basic-distance = #15
+        ragged-bottom = ##t
+%		ragged-last-bottom = ##t
+		system-count = #6
 %       page-breaking = #ly:minimal-breaking
         print-all-headers = ##t
     }
     \header {
-%       title       = \markup {\larger "Raccolta Prima"}
-%       subtitle    = "di piccoli brani al pianoforte"
-%       subsubtitle = "(1989)" %%"scritti al primo anno di lezioni (1989)"
-%       composer    = "gos95"
        tagline     = ##f
     }
 
@@ -241,7 +240,7 @@
     \pageBreak
 
     % -------------------------------------------------------------------------------------------------------------------
-    % No9 - Ragtime
+    % No10 - Allegretto
     % -------------------------------------------------------------------------------------------------------------------   
     \score {
         \new PianoStaff \with { midiInstrument = #"acoustic grand" }
@@ -260,6 +259,31 @@
         }
         \layout {}
         \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 96 4) } }
+    }
+    % -------------------------------------------------------------------------------------------------------------------
+
+    \pageBreak
+
+    % -------------------------------------------------------------------------------------------------------------------
+    % No11 - Preludio
+    % -------------------------------------------------------------------------------------------------------------------   
+    \score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+        <<
+            \set PianoStaff.instrumentName = \markup { "9" }
+            \new Staff = "treble" << \undiciUpper >>
+            \new Staff = "bass"   << \undiciLower >>
+        >>
+        \header {
+            title       = ##f
+            subtitle    = "Preludio"
+            subsubtitle = ##f
+            composer    = ##f
+            opus        = "Raccolta Prima, No.11"
+            meter       = ##f %\markup { \italic "                          Andante" }
+        }
+        \layout {}
+        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 68 4) } }
     }
     % -------------------------------------------------------------------------------------------------------------------
 }
