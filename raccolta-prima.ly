@@ -24,6 +24,7 @@
 \include "raccolta-prima-07-notturno.ly"
 \include "raccolta-prima-08-ballata.ly"
 \include "raccolta-prima-09-ragtime.ly"
+\include "raccolta-prima-10-allegretto.ly"
 
 
 % ===========================================================================================================
@@ -56,7 +57,9 @@
     \markup \fontsize #10 \bold { "  Raccolta Prima" }
     \markup { \vspace #1 }
     \markup \fontsize #5 \bold  { "    di piccoli brani al pianoforte" }
-    \markup { \vspace #8 }
+    \markup { \vspace #.7 }
+    \markup \fontsize #1 { "       (1989)" }
+    \markup { \vspace #7 }
     \markup { \general-align #Y #CENTER { \epsfile #X #100 #"raccolta-prima-front.eps" } }
     
 
@@ -232,6 +235,31 @@
         }
         \layout {}
         \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 72 4) } }
+    }
+    % -------------------------------------------------------------------------------------------------------------------
+
+    \pageBreak
+
+    % -------------------------------------------------------------------------------------------------------------------
+    % No9 - Ragtime
+    % -------------------------------------------------------------------------------------------------------------------   
+    \score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+        <<
+            \set PianoStaff.instrumentName = \markup { "8" }
+            \new Staff = "treble" << \dieciUpper >>
+            \new Staff = "bass"   << \dieciLower >>
+        >>
+        \header {
+            title       = ##f
+            subtitle    = "Allegretto"
+            subsubtitle = ##f
+            composer    = ##f
+            opus        = "Raccolta Prima, No.10"
+            meter       = ##f %\markup { \italic "                          Allegretto" }
+        }
+        \layout {}
+        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 96 4) } }
     }
     % -------------------------------------------------------------------------------------------------------------------
 }
