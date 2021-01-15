@@ -26,6 +26,7 @@
 \include "raccolta-prima-09-ragtime.ly"
 \include "raccolta-prima-10-allegretto.ly"
 \include "raccolta-prima-11-preludio.ly"
+\include "raccolta-prima-13-preludio.ly"
 
 
 % ===========================================================================================================
@@ -304,6 +305,33 @@
         }
         \layout {}
 %        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 68 4) } }
+    }   
+}
+% -------------------------------------------------------------------------------------------------------------------
+
+
+% -------------------------------------------------------------------------------------------------------------------
+% No13 - Preludio
+% -------------------------------------------------------------------------------------------------------------------
+\bookpart {
+%    \paper { system-count = #5 }
+    \score {
+        \new PianoStaff \with { midiInstrument = #"acoustic grand" }
+        <<
+            \set PianoStaff.instrumentName = \markup { "10" }
+            \new Staff = "treble" << \trediciUpper >>
+            \new Staff = "bass"   << \trediciLower >>
+        >>
+        \header {
+            title       = ##f
+            subtitle    = "Preludio"
+            subsubtitle = ##f
+            composer    = ##f
+            opus        = "Raccolta Prima, No.13"
+            meter       = ##f %\markup { \italic "                          Andante" }
+        }
+        \layout {}
+%        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
     }   
 }
 % -------------------------------------------------------------------------------------------------------------------
